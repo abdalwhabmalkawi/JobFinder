@@ -2,13 +2,13 @@
 //  AppDelegate.swift
 //  JobFinder
 //
-//  Created by Taha on 4/6/19.
+//  Created by Abdalwhab on 4/6/19.
 //  Copyright © 2019 Malkawi. All rights reserved.
 //
 
 import UIKit
 import CoreData
-
+import IQKeyboardManagerSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        IQKeyboardManager.shared.enable = true
         return true
     }
 

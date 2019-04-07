@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>The app needs location turned on to work properly. Tap "Only while using the app" to make washbox know your pickup and drop off location, only when you have an open order, and only when we need it</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>The app needs location turned on to work properly. Tap "Only while using the app" to make washbox know your pickup and drop off location, only when you have an open order, and only when we need it</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

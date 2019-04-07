@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IJ8-yh-JcI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,261 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZt-uX-GYe">
+                                <rect key="frame" x="16" y="291" width="343" height="85"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select provider" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxO-4p-7ce" customClass="ClassTextFieldSizeClass" customModule="JobFinder" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="9" width="327" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="tMa-WG-UVd"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="SelectProvider:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="4bi-MS-wOa"/>
+                                        </connections>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ux1-97-lON" customClass="CustomUIView" customModule="JobFinder" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="57" width="20" height="20"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Su-81-Eez" customClass="CustomUIView" customModule="JobFinder" customModuleProvider="target">
+                                                <rect key="frame" x="4" y="4" width="12" height="12"/>
+                                                <color key="backgroundColor" name="grayColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="ifCircle" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" name="grayColor"/>
+                                        <constraints>
+                                            <constraint firstItem="9Su-81-Eez" firstAttribute="top" secondItem="Ux1-97-lON" secondAttribute="top" constant="4" id="2Bw-Dr-yiA"/>
+                                            <constraint firstAttribute="height" constant="20" id="3gd-va-xqg">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                            </constraint>
+                                            <constraint firstAttribute="bottom" secondItem="9Su-81-Eez" secondAttribute="bottom" constant="4" id="HlE-Oc-ucA"/>
+                                            <constraint firstAttribute="width" constant="20" id="Shv-uU-FIj">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="9Su-81-Eez" secondAttribute="trailing" constant="4" id="og9-OJ-UNk"/>
+                                            <constraint firstItem="9Su-81-Eez" firstAttribute="leading" secondItem="Ux1-97-lON" secondAttribute="leading" constant="4" id="uwG-vH-dXY"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ifCircle" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="purpleColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fillter by location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3SH-lX-bHQ" customClass="ClassLabelSizeClass" customModule="JobFinder" customModuleProvider="target">
+                                        <rect key="frame" x="36" y="60" width="299" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" name="purpleColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3SH-lX-bHQ" secondAttribute="trailing" constant="8" id="22h-qC-Dfg"/>
+                                    <constraint firstItem="Ux1-97-lON" firstAttribute="top" secondItem="xxO-4p-7ce" secondAttribute="bottom" constant="8" id="4Fi-cU-LOv"/>
+                                    <constraint firstItem="xxO-4p-7ce" firstAttribute="leading" secondItem="dZt-uX-GYe" secondAttribute="leading" constant="8" id="F9n-ly-8Pt"/>
+                                    <constraint firstItem="xxO-4p-7ce" firstAttribute="top" secondItem="dZt-uX-GYe" secondAttribute="top" constant="9" id="OU1-lV-8sS"/>
+                                    <constraint firstItem="Ux1-97-lON" firstAttribute="leading" secondItem="dZt-uX-GYe" secondAttribute="leading" constant="8" id="THy-Ba-Wo1"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ux1-97-lON" secondAttribute="bottom" constant="8" id="fSK-ph-A3k"/>
+                                    <constraint firstAttribute="trailing" secondItem="xxO-4p-7ce" secondAttribute="trailing" constant="8" id="sgE-5y-ahY"/>
+                                    <constraint firstItem="3SH-lX-bHQ" firstAttribute="leading" secondItem="Ux1-97-lON" secondAttribute="trailing" constant="8" id="wmj-3I-JDK"/>
+                                    <constraint firstItem="3SH-lX-bHQ" firstAttribute="centerY" secondItem="Ux1-97-lON" secondAttribute="centerY" id="zUf-d7-aGF"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVk-KG-uMJ" customClass="CustomUIButton" customModule="JobFinder" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="607" width="150" height="40"/>
+                                <color key="backgroundColor" name="purpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="3qK-ux-fTn"/>
+                                    <constraint firstAttribute="height" constant="40" id="asI-nV-ntP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" name="grayColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="NextBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tsc-ck-irT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="grayColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dZt-uX-GYe" secondAttribute="trailing" constant="16" id="2Bf-HL-lIo"/>
+                            <constraint firstItem="tVk-KG-uMJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fc4-rZ-wnC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tVk-KG-uMJ" secondAttribute="bottom" constant="20" id="IGt-gS-BsA"/>
+                            <constraint firstItem="dZt-uX-GYe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JYL-XP-Bc7"/>
+                            <constraint firstItem="dZt-uX-GYe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PH7-6Y-xqF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2uZ-ze-pce"/>
+                    <connections>
+                        <outlet property="filterByLonLat" destination="9Su-81-Eez" id="lNO-o6-byj"/>
+                        <outlet property="providerTF" destination="xxO-4p-7ce" id="TOI-wg-1js"/>
+                        <segue destination="75g-Ut-rsw" kind="show" identifier="SearchVC" id="hJs-zn-a4R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1160.8" y="792.95352323838085"/>
+        </scene>
+        <!--SearchVC-->
+        <scene sceneID="AJP-Je-f9D">
+            <objects>
+                <viewController id="75g-Ut-rsw" customClass="SearchVC" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NUs-ML-9Ts">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oLf-VW-7c7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="grayColor"/>
+                        <constraints>
+                            <constraint firstItem="oLf-VW-7c7" firstAttribute="top" secondItem="E0Z-ik-m03" secondAttribute="top" id="1qT-wz-Vhw"/>
+                            <constraint firstItem="E0Z-ik-m03" firstAttribute="trailing" secondItem="oLf-VW-7c7" secondAttribute="trailing" id="5gg-88-UZP"/>
+                            <constraint firstItem="oLf-VW-7c7" firstAttribute="leading" secondItem="E0Z-ik-m03" secondAttribute="leading" id="RNF-o0-cNm"/>
+                            <constraint firstItem="E0Z-ik-m03" firstAttribute="bottom" secondItem="oLf-VW-7c7" secondAttribute="bottom" id="rJ0-oE-LBc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E0Z-ik-m03"/>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="oLf-VW-7c7" id="l7D-7d-bl2"/>
+                        <segue destination="W1I-5U-2u3" kind="show" identifier="DetailsVC" id="Oue-mq-zZO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dis-VW-sW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1939" y="797"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="Q2C-7p-2t5">
+            <objects>
+                <viewController id="W1I-5U-2u3" customClass="DetailsVC" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qXb-r0-H5P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1k6-dY-a2T">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tXm-bi-9QT">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMM-jT-Lsw" customClass="ClassLabelSizeClass" customModule="JobFinder" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="208" width="359" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" name="purpleColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOC-kj-CEP" customClass="ClassLabelSizeClass" customModule="JobFinder" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="233.5" width="359" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLa-pS-okI" customClass="ClassButtonSizeClass" customModule="JobFinder" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="258.5" width="359" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="OpenURL:" destination="W1I-5U-2u3" eventType="touchUpInside" id="FFB-f9-36I"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtA-io-fyl" customClass="ClassLabelSizeClass" customModule="JobFinder" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="292.5" width="359" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tXm-bi-9QT" firstAttribute="width" secondItem="tXm-bi-9QT" secondAttribute="height" multiplier="15:8" id="3Y0-Ee-dQI"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZtA-io-fyl" secondAttribute="bottom" constant="8" id="4pf-J2-KEz"/>
+                                    <constraint firstAttribute="trailing" secondItem="DMM-jT-Lsw" secondAttribute="trailing" constant="8" id="LjW-bE-iVB"/>
+                                    <constraint firstAttribute="trailing" secondItem="tXm-bi-9QT" secondAttribute="trailing" id="MQw-Db-FYx"/>
+                                    <constraint firstItem="tXm-bi-9QT" firstAttribute="top" secondItem="1k6-dY-a2T" secondAttribute="top" id="PZc-dR-VHG"/>
+                                    <constraint firstItem="FOC-kj-CEP" firstAttribute="top" secondItem="DMM-jT-Lsw" secondAttribute="bottom" constant="4" id="SaJ-Sc-rsq"/>
+                                    <constraint firstItem="tXm-bi-9QT" firstAttribute="leading" secondItem="1k6-dY-a2T" secondAttribute="leading" id="TGi-gF-du9"/>
+                                    <constraint firstItem="tXm-bi-9QT" firstAttribute="centerX" secondItem="1k6-dY-a2T" secondAttribute="centerX" id="Ul2-9e-mGw"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZtA-io-fyl" secondAttribute="trailing" constant="8" id="aJB-An-zs8"/>
+                                    <constraint firstItem="ZtA-io-fyl" firstAttribute="leading" secondItem="1k6-dY-a2T" secondAttribute="leading" constant="8" id="adg-5C-8X0"/>
+                                    <constraint firstItem="FOC-kj-CEP" firstAttribute="leading" secondItem="1k6-dY-a2T" secondAttribute="leading" constant="8" id="nHo-hy-vaz"/>
+                                    <constraint firstItem="ZtA-io-fyl" firstAttribute="top" secondItem="CLa-pS-okI" secondAttribute="bottom" constant="4" id="oZh-vg-qz0"/>
+                                    <constraint firstItem="CLa-pS-okI" firstAttribute="top" secondItem="FOC-kj-CEP" secondAttribute="bottom" constant="4" id="qiM-IO-Naj"/>
+                                    <constraint firstItem="DMM-jT-Lsw" firstAttribute="leading" secondItem="1k6-dY-a2T" secondAttribute="leading" constant="8" id="sRY-fw-UAA"/>
+                                    <constraint firstAttribute="trailing" secondItem="CLa-pS-okI" secondAttribute="trailing" constant="8" id="tE7-JA-g2y"/>
+                                    <constraint firstAttribute="trailing" secondItem="FOC-kj-CEP" secondAttribute="trailing" constant="8" id="thp-ZY-xAL"/>
+                                    <constraint firstItem="DMM-jT-Lsw" firstAttribute="top" secondItem="tXm-bi-9QT" secondAttribute="bottom" constant="8" id="xBH-VE-oRv"/>
+                                    <constraint firstItem="CLa-pS-okI" firstAttribute="leading" secondItem="1k6-dY-a2T" secondAttribute="leading" constant="8" id="z6L-Po-cjp"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" name="grayColor"/>
+                        <constraints>
+                            <constraint firstItem="V2Y-NR-BcB" firstAttribute="trailing" secondItem="1k6-dY-a2T" secondAttribute="trailing" id="2TF-dY-yEo"/>
+                            <constraint firstItem="V2Y-NR-BcB" firstAttribute="bottom" secondItem="1k6-dY-a2T" secondAttribute="bottom" id="6or-a8-XCD"/>
+                            <constraint firstItem="1k6-dY-a2T" firstAttribute="top" secondItem="V2Y-NR-BcB" secondAttribute="top" id="Zli-bE-VVK"/>
+                            <constraint firstItem="1k6-dY-a2T" firstAttribute="leading" secondItem="V2Y-NR-BcB" secondAttribute="leading" id="odq-yw-Q3y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V2Y-NR-BcB"/>
+                    </view>
+                    <connections>
+                        <outlet property="company" destination="CLa-pS-okI" id="kKt-od-awr"/>
+                        <outlet property="dateLB" destination="FOC-kj-CEP" id="5ov-me-xcO"/>
+                        <outlet property="descriptionLB" destination="ZtA-io-fyl" id="uP3-Zd-pbm"/>
+                        <outlet property="imgView" destination="tXm-bi-9QT" id="5jC-Pm-tOf"/>
+                        <outlet property="titleLB" destination="DMM-jT-Lsw" id="hnI-gv-aEE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z9T-aP-ov5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2744.8000000000002" y="796.55172413793105"/>
+        </scene>
+        <!--Abdalwhab Nav Controller-->
+        <scene sceneID="4uE-qv-Eg9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IJ8-yh-JcI" customClass="AbdalwhabNavController" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sjD-vw-ooO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TT3-jA-5VO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsV-io-lbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="792.95352323838085"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="grayColor">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="purpleColor">
+            <color red="0.30196078431372547" green="0.0" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
